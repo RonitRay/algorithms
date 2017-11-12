@@ -24,7 +24,7 @@ void floydWarshall (int g[][V])
     int d[V][V], i, j, k;
     for (i = 0; i < V; i++)
         for (j = 0; j < V; j++)
-            d[i][j] = d[i][j];
+            d[i][j] = g[i][j];
  
     for (k = 0; k < V; k++)
     {
