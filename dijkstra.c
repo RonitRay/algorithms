@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <limits.h>
 #define V 9
-int minDistance(int d[], bool set[])
+int minDistance(int d[], int set[])
 {
    int min = INT_MAX, pos;
   
    for (int v = 0; v < V; v++)
-     if (set[v] == false && d[v] <= min)
+     if (set[v] == 0 && d[v] <= min)
          min = d[v], pos = v;
   
    return pos;
@@ -22,9 +22,9 @@ int printSolution(int d[], int n)
 void dijkstra(int g[V][V], int src)
 {
     int d[V];
-    bool set[V]; 
+    int set[V]; 
     for (int i = 0; i < V; i++)
-      d[i] = INT_MAX, set[i] = false;
+      d[i] = INT_MAX, set[i] = 0;
      
     d[src] = 0;
 
@@ -32,7 +32,7 @@ void dijkstra(int g[V][V], int src)
     {
      int u = minDistance(d, set);
 
-     set[u] = true;
+     set[u] = 1;
 
      for (int v = 0; v < V; v++)
 
