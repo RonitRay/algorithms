@@ -34,10 +34,8 @@ void main()
     dfs(1);
     printf("n");
     for (i = 1; i <= n; i++) 
-    {
         if (reach[i])
             count++;
-    }
     if (count == n)
         printf("Graph is connected");
     else
