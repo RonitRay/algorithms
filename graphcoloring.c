@@ -34,7 +34,7 @@ int util(int g[V][V], int m, int col[], int v)
            col[v] = 0;
         }
     }
-     return 0;
+    return 0;
 }
  
 int graphColoring(int g[V][V], int m)
